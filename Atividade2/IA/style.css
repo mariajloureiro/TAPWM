@@ -1,0 +1,558 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 12, 21);
+    font-family: monospace;
+    color: lightgray;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* Estilo da Navbar (links) */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(180, 175, 175);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav ul li a:hover {
+    background-color: #1e90ff; /* Cor de fundo ao passar o mouse */
+}
+
+
+/*Cabeçalho*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border: 0.5px solid rgba(110, 101, 114, 0.5);
+}
+.head-left{
+    display: flex;
+    align-items: center;
+}
+
+.head-left img{
+    height: 45px;
+    margin-right: 15px;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+header ul li{
+    list-style: none;
+   
+}
+
+
+header  a{
+    text-decoration: none;
+    color: gray;
+    font-weight: 900;
+    font: 15px;
+    transition: 0.3s;
+}
+header a:hover{
+    color: lightgray;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.352) ;
+}
+
+.head-right{
+    display: flex;
+    align-items: center;
+}
+
+.button-box{
+    position: relative;
+    width: 90px;
+    height: 45px;
+    margin-left: 25px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c,#2a46ff,#0099ff,#00aaa7);
+    border-radius: 10px;
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite ;
+    clip-path: polygon(0 0, 73% 0, 100% 36%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%);
+    cursor: pointer;
+}
+
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+
+.head-right button{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: rgb(14, 12, 21);
+    color: lightgray;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 73% 0, 100% 36%, 100% 80%, 100% 100%, 0 100%, 0% 80%, 0% 20%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.head-right button:hover{
+    color: #7e00d2;
+}
+/*imagens*/
+.robo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 150vh;
+    overflow: hidden;
+}
+
+.robo-desfocada{
+    position: absolute;
+    width: 100%;
+    top: -15%;
+}
+.robo-aneis{
+    position: absolute;
+    height: 90%;
+    top: 90px;
+    opacity: 0.3;
+}
+
+.robo-icons{
+    width: 100%;
+    position: absolute;
+    top: 8%;
+
+}
+/*texto inicial*/
+
+.robo h1{
+    position: absolute;
+    top: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    max-width: 1000px;
+    text-align: center;
+    color: white;
+}
+
+.robo h3{
+    position: absolute;
+    top: 16%;
+    font-size: 15px;
+    max-width: 560px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: rgb(88, 88, 88);
+}
+.robo-imagem-box{
+    margin-top: 300px;
+    position: relative;
+    width: 1000px;
+    height: 550px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c,#2a46ff,#0099ff,#00aaa7);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+}
+
+.robo-imagem-box .robo-box{
+    width: 99%;
+    height: 98%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+}
+.robo-imagem-box  .robo-box img{
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: hard-light;
+}
+.robo-imagem-box  .robo-box .robo-header{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px) ;
+}
+/*sections*/
+.titulo{
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.exemplos{
+    padding: 100px 15px;
+    background: var(--second-bg-color);
+}
+.exemplos h2{
+    margin-bottom: 5rem;
+}
+.timeline-itens{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.timeline-itens::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: rgb(108, 91, 168);
+    left: calc(50%  - 3px);
+}
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+
+}
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 20%);
+}
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color:rgb(108, 91, 168);
+    box-shadow: 0 0  25px  rgb(108, 91, 168),
+                0 0  50px rgb(108, 91, 168);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+.timeline-content{
+    background-color: rgb(108, 91, 168);
+    border: 3px solid rgb(110, 90, 185);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px;
+    cursor:pointer;
+    transition: 0.3s ease-in-out;
+}
+.timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgb(108, 91, 168);
+}
+.timeline-content h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+.timeline-content p{
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 22px;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    border: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(108, 91, 168);
+}
+::-webkit-scrollbar-track{
+    background-color:rgb(14, 12, 21);
+    width: 50px;
+}
+.ferramentas{
+    background:rgb(14, 12, 21) ;
+    color: white;
+}
+.ferramentas h2{
+    margin-bottom: 5rem;
+    color: white;
+}
+.ferramentas-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.ferramentas-box{
+    background-color: rgb(108, 91, 168);
+    height: 200px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.ferramentas-box:hover{
+    background:white;
+    color: rgb(108, 91, 168);
+    border: 5px solid ;
+    transform: scale(1.03);
+}
+.ferramentas-box .ferramentas-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 5rem 5rem;
+}
+.ferramentas-info h4{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.7;
+    margin: auto;
+}
+.etica{
+    background-color: rgb(14, 12, 21);
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o subtítulo */
+}
+
+.etica p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 15px;
+    text-align: justify; /* Justifica o texto para melhor leitura */
+    max-width: 900px; /* Limita a largura do parágrafo */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.etica-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo Geral da Seção de Bibliografia */
+.bibliografia {
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar a seção */
+}
+
+.bibliografia-box {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+.bibliografia-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bibliografia-lista li {
+    margin-bottom: 20px; /* Espaçamento entre as referências */
+}
+
+.bibliografia-lista p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-family: "Arial", sans-serif;
+}
+
+.bibliografia-lista a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.bibliografia-lista a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para telas com largura de 850px */
+@media (max-width: 850px) {
+    nav ul {
+        gap: 15px; /* Reduzindo o espaçamento entre os itens do menu */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .robo h1 {
+        font-size: 24px; /* Ajusta o tamanho do título */
+    }
+
+    .robo h3 {
+        font-size: 12px; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .robo-imagem-box {
+        margin-top: 150px;
+        width: 80%; /* Ajusta a largura da imagem */
+    }
+
+    .robo-imagem-box .robo-box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .ferramentas-container {
+        grid-template-columns: 1fr; /* Coloca os itens em uma coluna para melhor exibição */
+    }
+
+    .titulo {
+        font-size: 5rem; /* Reduz o tamanho do título */
+    }
+}
+
+/* Responsividade para telas com largura de 600px */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .robo h1 {
+        font-size: 20px; /* Reduz ainda mais o título */
+    }
+
+    .robo h3 {
+        font-size: 12px; /* Ajuste o tamanho do subtítulo */
+    }
+
+    .robo-imagem-box {
+        width: 100%;
+        margin-top: 100px; /* Ajusta a posição das imagens */
+    }
+
+    .ferramentas-container {
+        grid-template-columns: 1fr; /* Coloca os itens em uma coluna */
+    }
+
+    .timeline-itens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 3rem; /* Ajusta o tamanho do título */
+    }
+
+    .bibliografia-lista p {
+        font-size: 14px; /* Ajusta o tamanho do texto da bibliografia */
+    }
+
+    .button-box {
+        width: 70px;
+        height: 35px;
+    }
+
+    .head-left img {
+        height: 35px; /* Ajuste o tamanho da imagem */
+    }
+}
+
+/* Responsividade para telas com largura de 488px */
+@media (max-width: 488px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px; /* Diminui o espaçamento entre os links */
+        align-items: center;
+    }
+
+    .robo h1 {
+        font-size: 18px; /* Ajusta o tamanho do título */
+    }
+
+    .robo h3 {
+        font-size: 10px; /* Ajuste o tamanho do subtítulo */
+    }
+
+    .robo-imagem-box {
+        margin-top: 80px;
+    }
+
+    .ferramentas-container {
+        grid-template-columns: 1fr; /* Garante que os itens da ferramenta fiquem em uma coluna */
+    }
+
+    .timeline-itens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .bibliografia-lista p {
+        font-size: 12px; /* Ajuste o tamanho do texto da bibliografia */
+    }
+
+    .button-box {
+        width: 60px;
+        height: 30px;
+    }
+
+    .head-left img {
+        height: 30px; /* Ajusta o tamanho da imagem */
+    }
+
+    .head-right button {
+        font-size: 10px; /* Ajusta o tamanho do botão */
+    }
+}
